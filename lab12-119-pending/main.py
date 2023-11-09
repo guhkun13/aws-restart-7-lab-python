@@ -12,9 +12,11 @@ insulin = bInsulin + aInsulin
 pKR = {'y':10.07,'c': 8.18,'k':10.53,'h':6.00,'r':12.48,'d':3.65,'e':4.25}
 
 seqCount = ({x: float(insulin.count(x)) for x in ['y','c','k','h','r','d','e']})
-
 print(seqCount)
-
+seqCount2 = {}
+for x in ['y','c','k','h','r','d','e']:
+    seqCount2[x] = float(insulin.count(x))
+print(seqCount2)
 pH = 0
 
 while (pH <= 14):
@@ -24,6 +26,11 @@ while (pH <= 14):
     -(sum({x: ((seqCount[x]*(10**pH))/((10**pH)+(10**pKR[x]))) \
     for x in ['y','c','d','e']}.values())))
 
-    print('{0:.2f}'.format(pH), netCharge)
+    # print('{0:.2f}'.format(pH), netCharge)
     
     pH +=1
+    
+    
+# Low Level  - Machine -> karena dia langsung aksesing memori + compiled --> bahasanya itu di-binerkan
+# High Level - Human -> Python -> compile ke C 
+# PHP -> gatau

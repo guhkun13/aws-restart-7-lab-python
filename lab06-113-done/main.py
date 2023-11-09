@@ -44,8 +44,9 @@ with open('car_fleet.csv') as csvFile:
 
 for myCarProperties in myInventoryList:
     for key, value in myCarProperties.items():
-        print(f"{key} : {value}")
-        print("-----")
+        print(f"{key} : {value}", end = ' ')
+        print("-----", end = ' ')
+    print(" ")
 
 
 # print(f'vin: {row[0]} make: {row[1]}, model: {row[2]}, year: {row[3]}, range: {row[4]}, topSpeed: {row[5]}, zeroSixty: {row[6]}, mileage: {row[7]}')

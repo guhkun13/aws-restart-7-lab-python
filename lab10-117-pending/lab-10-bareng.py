@@ -1,6 +1,4 @@
-from main import get_my_data
-
-
+from helper import get_my_data
 
 # open file
 with open('lab-10-bareng/preproinsulin-seq-clean.txt', 'r') as f:
@@ -11,17 +9,16 @@ with open('lab-10-bareng/preproinsulin-seq-clean.txt', 'r') as f:
     
     # 1-24 = 0-24
     pertama = line[0:24]
-    print(pertama, end="")
+    print(pertama)
     # 25 - 54 
     kedua = line[24:54]
-    print(kedua, end="")
+    print(kedua)
     # 55-89
     ketiga = line[54:89]
-    print(ketiga, end="")
+    print(ketiga)
     # 90 - 110
     keempat = line[89:110]
-    print(keempat, end="")
+    print(keempat)
     
-        
 
 print("\n",len(pertama), len(kedua), len(ketiga), len(keempat))

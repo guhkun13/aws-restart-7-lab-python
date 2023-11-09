@@ -1,8 +1,6 @@
 # Module Lab: Caesar Cipher Program Bug #4
-#
 # In a previous lab, you created a Caesar cipher program. This version of
 # the program is buggy. Use a debugger to find the bug and fix it.
-
 # Double the given alphabet
 def getDoubleAlphabet(alphabet):
     doubleAlphabet = alphabet + alphabet
